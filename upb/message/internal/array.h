@@ -38,7 +38,7 @@ struct upb_Array {
   size_t size;      // The number of elements in the array.
   size_t capacity;  // Allocated storage. Measured in elements.
 };
-// LINT.ThenChange(GoogleInternalName1)
+// LINT.ThenChange(GoogleInternalName0)
 
 UPB_INLINE void _upb_Array_SetTaggedPtr(upb_Array* arr, void* data,
                                         size_t lg2) {

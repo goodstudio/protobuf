@@ -25,7 +25,7 @@ typedef struct {
   size_t size;
 } upb_StringView;
 // LINT.ThenChange(
-//  GoogleInternalName0,
+//  GoogleInternalName1,
 //  //depot/google3/third_party/upb/bits/golang/accessor.go:map_go_string
 // )
 
