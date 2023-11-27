@@ -2561,9 +2561,10 @@ bool CommandLineInterface::EnforceEditionsSupport(
     return true;
   }
   for (const auto* fd : parsed_files) {
-    // Skip enforcement for allowlisted files.
-    if (IsEarlyEditionsFile(fd->name())) continue;
-
+    if (absl::StartsWith(fd->name(), "google/protobuf/") ||
+        absl::StartsWith(fd->name(), "upb/")) {
+      continue;
+    }
     if (FileDescriptorLegacy(fd).syntax() ==
         FileDescriptorLegacy::SYNTAX_EDITIONS) {
       std::cerr
